@@ -42,43 +42,118 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/743c47cdd5f5c6af1f3e45e6684597b1/script.js"></script>
 <!-- End cookieyes banner -->
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          'brand-blue': '#4F8EF7',
-          'brand-teal': '#00C9A7',
-          'tg-blue': '#2AABEE',
-          'bg-deep': '#0A0F1E',
-          'bg-mid': '#1A2A5E',
-        },
-        fontFamily: {
-          'syne': ['Syne', 'sans-serif'],
-          'sans': ['DM Sans', 'sans-serif'],
-        },
-      },
-    },
-  }
-</script>
-
 <style>
-  body {
-    background: linear-gradient(160deg, #0A0F1E 0%, #1A2A5E 100%);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 200;
-  }
-  .font-syne {
-    font-family: 'Syne', sans-serif;
-  }
-  @keyframes soft-pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(79, 142, 247, 0.45); }
-    50% { box-shadow: 0 0 0 8px rgba(79, 142, 247, 0); }
-  }
-  .pulse-cta {
-    animation: soft-pulse 2.4s ease-in-out infinite;
-  }
+/* Preflight */
+*,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:currentColor}
+html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:'DM Sans',sans-serif}
+body{margin:0;line-height:inherit}
+a{color:inherit;text-decoration:inherit}
+img,svg{display:block;vertical-align:middle}
+img{max-width:100%;height:auto}
+
+/* Body */
+body{background:linear-gradient(160deg,#0A0F1E 0%,#1A2A5E 100%);font-family:'DM Sans',sans-serif;font-weight:200}
+
+/* Layout */
+.min-h-screen{min-height:100vh}
+.max-w-sm{max-width:24rem}
+@media(min-width:768px){.md\:max-w-md{max-width:28rem}}
+.mx-auto{margin-left:auto;margin-right:auto}
+.flex{display:flex}
+.flex-col{flex-direction:column}
+.items-center{align-items:center}
+.items-start{align-items:flex-start}
+.justify-center{justify-content:center}
+.shrink-0{flex-shrink:0}
+.w-full{width:100%}
+.w-12{width:3rem}
+.h-12{height:3rem}
+.w-7{width:1.75rem}
+.h-7{height:1.75rem}
+
+/* Spacing */
+.px-5{padding-left:1.25rem;padding-right:1.25rem}
+.px-3{padding-left:.75rem;padding-right:.75rem}
+.px-3\.5{padding-left:.875rem;padding-right:.875rem}
+.py-6{padding-top:1.5rem;padding-bottom:1.5rem}
+.py-3{padding-top:.75rem;padding-bottom:.75rem}
+.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}
+.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}
+.mt-1\.5{margin-top:.375rem}
+.mt-3\.5{margin-top:.875rem}
+.mt-4{margin-top:1rem}
+.mt-6{margin-top:1.5rem}
+.gap-1\.5{gap:.375rem}
+.gap-2{gap:.5rem}
+.gap-2\.5{gap:.625rem}
+.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}
+.min-h-\[44px\]{min-height:44px}
+
+/* Typography */
+.font-syne{font-family:'Syne',sans-serif}
+.font-sans{font-family:'DM Sans',sans-serif}
+.text-xl{font-size:1.25rem;line-height:1.75rem}
+.text-sm{font-size:.875rem;line-height:1.25rem}
+.text-\[10px\]{font-size:10px}
+.font-extralight{font-weight:200}
+.font-normal{font-weight:400}
+.font-medium{font-weight:500}
+.font-bold{font-weight:700}
+.leading-snug{line-height:1.375}
+.leading-tight{line-height:1.25}
+.leading-relaxed{line-height:1.625}
+.text-center{text-align:center}
+.whitespace-nowrap{white-space:nowrap}
+.no-underline{text-decoration-line:none}
+
+/* Colors */
+.text-white{color:#fff}
+.text-gray-100{color:#f3f4f6}
+.text-gray-300{color:#d1d5db}
+.text-gray-400{color:#9ca3af}
+.text-gray-500{color:#6b7280}
+.text-gray-600{color:#4b5563}
+
+/* Backgrounds */
+.bg-white\/5{background-color:rgb(255 255 255/.05)}
+.bg-black\/20{background-color:rgb(0 0 0/.2)}
+.bg-\[#0F1629\]\/60{background-color:rgb(15 22 41/.6)}
+
+/* Borders */
+.border{border-width:1px}
+.border-transparent{border-color:transparent}
+.border-white\/10{border-color:rgb(255 255 255/.1)}
+.border-tg-blue\/80{border-color:rgb(42 171 238/.8)}
+
+/* Border radius */
+.rounded-full{border-radius:9999px}
+.rounded-lg{border-radius:.5rem}
+.rounded-\[7px\]{border-radius:7px}
+
+/* Object fit */
+.object-cover{object-fit:cover}
+
+/* Backdrop */
+.backdrop-blur-md{-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+
+/* Transitions */
+.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
+.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
+.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
+.duration-150{transition-duration:150ms}
+.duration-200{transition-duration:200ms}
+
+/* Interactive states */
+.hover\:text-gray-300:hover{color:#d1d5db}
+.active\:bg-white\/10:active{background-color:rgb(255 255 255/.1)}
+.active\:border-\[\#4F8EF7\]\/40:active{border-color:rgb(79 142 247/.4)}
+.active\:border-\[\#7BB3FF\]\/40:active{border-color:rgb(123 179 255/.4)}
+.active\:border-\[\#00C9A7\]\/40:active{border-color:rgb(0 201 167/.4)}
+.active\:scale-95:active{transform:scale(.95)}
+
+/* Animation */
+@keyframes soft-pulse{0%,100%{box-shadow:0 0 0 0 rgba(79,142,247,.45)}50%{box-shadow:0 0 0 8px rgba(79,142,247,0)}}
+.pulse-cta{animation:soft-pulse 2.4s ease-in-out infinite}
 </style>
 </head>
 
@@ -108,7 +183,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="mt-4 space-y-2">
 
     <div class="flex items-center gap-2.5 bg-white/5 backdrop-blur-md border border-transparent rounded-lg px-3 py-1.5 transition-all duration-150 active:bg-white/10 active:border-[#4F8EF7]/40">
-      <div class="w-7 h-7 rounded-[7px] flex items-center justify-center shrink-0" style="background: rgba(79,142,247,0.12);">
+      <div class="w-7 h-7 rounded-[7px] flex items-center justify-center shrink-0" style="background:rgba(79,142,247,0.12)">
         <svg width="15" height="15" viewBox="0 0 24 24">
           <path d="M12 3L3 10v10h6v-6h6v6h6V10L12 3z" fill="#4F8EF7"/>
           <rect x="10" y="14" width="4" height="6" fill="white" opacity="0.85"/>
@@ -118,7 +193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="flex items-center gap-2.5 bg-white/5 backdrop-blur-md border border-transparent rounded-lg px-3 py-1.5 transition-all duration-150 active:bg-white/10 active:border-[#7BB3FF]/40">
-      <div class="w-7 h-7 rounded-[7px] flex items-center justify-center shrink-0" style="background: rgba(123,179,255,0.12);">
+      <div class="w-7 h-7 rounded-[7px] flex items-center justify-center shrink-0" style="background:rgba(123,179,255,0.12)">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
           <path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3" stroke="#7BB3FF" stroke-width="2.2" stroke-linecap="round"/>
           <path d="M18 4v4h-4M6 20v-4h4" stroke="#7BB3FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -128,7 +203,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="flex items-center gap-2.5 bg-white/5 backdrop-blur-md border border-transparent rounded-lg px-3 py-1.5 transition-all duration-150 active:bg-white/10 active:border-[#00C9A7]/40">
-      <div class="w-7 h-7 rounded-[7px] flex items-center justify-center shrink-0" style="background: rgba(0,201,167,0.12);">
+      <div class="w-7 h-7 rounded-[7px] flex items-center justify-center shrink-0" style="background:rgba(0,201,167,0.12)">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
           <path d="M12 2.5L5 5.2v5.6c0 4.6 3.2 8.4 7 9.9 3.8-1.5 7-5.3 7-9.9V5.2L12 2.5z" fill="#00C9A7"/>
           <path d="M8.7 12.2l2.3 2.3 4.3-4.6" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -138,7 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="flex items-center gap-2.5 bg-white/5 backdrop-blur-md border border-transparent rounded-lg px-3 py-1.5 transition-all duration-150 active:bg-white/10 active:border-[#4F8EF7]/40">
-      <div class="w-7 h-7 rounded-[7px] flex items-center justify-center shrink-0" style="background: rgba(79,142,247,0.12);">
+      <div class="w-7 h-7 rounded-[7px] flex items-center justify-center shrink-0" style="background:rgba(79,142,247,0.12)">
         <svg width="15" height="15" viewBox="0 0 24 24">
           <rect x="4" y="14" width="3.5" height="6" fill="#4F8EF7"/>
           <rect x="10.25" y="9" width="3.5" height="11" fill="#4F8EF7"/>
@@ -153,7 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- 4. Блок-мотиватор -->
   <div class="mt-4 bg-black/20 backdrop-blur-md border border-white/10 rounded-lg px-3.5 py-3">
     <div class="flex items-start gap-2.5">
-      <div class="w-7 h-7 rounded-[7px] flex items-center justify-center shrink-0" style="background: rgba(255,255,255,0.1);">
+      <div class="w-7 h-7 rounded-[7px] flex items-center justify-center shrink-0" style="background:rgba(255,255,255,0.1)">
         <svg width="14" height="14" viewBox="0 0 24 24">
           <path d="M4 4h16a2 2 0 012 2v9a2 2 0 01-2 2h-7l-4.5 4v-4H4a2 2 0 01-2-2V6a2 2 0 012-2z" fill="white"/>
         </svg>
@@ -167,12 +242,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <!-- 5. Блок кнопок (CTA) — ширина как у остальных карточек -->
+  <!-- 5. Блок кнопок (CTA) -->
   <div class="mt-4 space-y-2">
 
     <a href="https://t.me/irina_hypoteka_bot?start=ZGw6MzMyMDQ3" target="_blank" rel="noopener noreferrer"
        class="pulse-cta flex items-center justify-center gap-1.5 w-full min-h-[44px] py-2.5 rounded-full font-bold text-sm text-white active:scale-95 transition-transform duration-150"
-       style="background: linear-gradient(90deg, #4F8EF7 0%, #00C9A7 100%);">
+       style="background:linear-gradient(90deg,#4F8EF7 0%,#00C9A7 100%)">
       <svg width="15" height="15" viewBox="0 0 24 24" class="shrink-0">
         <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" fill="white"/>
       </svg>
@@ -201,20 +276,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- UTM to Telegram Links Script -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    var urlParams = window.location.search;
-    if (urlParams) {
-        var links = document.querySelectorAll('a[href*="t.me"]');
-        links.forEach(function(link) {
-            var currentHref = link.getAttribute('href');
-            if (currentHref.indexOf('?') !== -1) {
-                link.setAttribute('href', currentHref + '&' + urlParams.substring(1));
-            } else {
-                link.setAttribute('href', currentHref + urlParams);
-            }
-        });
-    }
-});
+document.addEventListener("DOMContentLoaded",function(){var u=window.location.search;if(u){document.querySelectorAll('a[href*="t.me"]').forEach(function(l){var h=l.getAttribute('href');l.setAttribute('href',h+(h.indexOf('?')!==-1?'&':'')+u.substring(1));});}});
 </script>
 </body>
 </html>
